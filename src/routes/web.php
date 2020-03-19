@@ -11,6 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/resavations', 'ResavationController@index');
+Route::get('/resavations/resavation_confirm', 'ResavationController@create');
+Route::get('/resavations/store', 'ResavationController@store');
+Route::delete('/resavations/{resavation}', "ResavationController@destroy");
